@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .f {
+      margin-left: 10px;
+    }
+
+    #progress {
+      width: 550px;
+      margin-right: 10px;
+    }
+
+
+    button {
+      width: 55px;
+      margin: 0 8px;
+      font-size: 12px;
+      font-family: "宋体";
+    }
+
+  </style>
+
+  <body>
+
+    <video id="sou" controls>
+        <source  src="./video/fun.mp4" >
+        <source src="./video/chrome.ogv" >
+      </video>
+
+
+    <form id="form1" action="index.html" method="post">
+      <div class="f">
+        <progress id="progress" value="0" min="0" max="100"></progress>
+        <span id="current">00:00</span>
+        <span>/</span>
+        <span id="total">02:30</span>
+      </div>
+      <button type="button" name="button" id="ps">播放</button>
+      <button type="button" name="button" id="quiet">静音</button>
+      <input type="range" id="range" name="range" value="0.5" min="0" max="1" step="0.1">
+      <button type="button" name="button" id="fast">快进5s</button>
+      <button type="button" name="button" id="bfive">后退5s</button>
+      <button type="button" name="button" id="sup">加速</button>
+      <button type="button" name="button" id="sdown">减速</button>
+      <button type="button" name="button" id="full">全屏</button>
+
+    </form>
+    <!--
+    javascript控制video的属性，方法：
+    muted
+    currentTime
+    duration
+    volume
+    play()
+    pause()
+    playbackRate (0.25~0.5之间的数字， 1.0为正常)
+    timeupdate事件（更新）
+    loadedmetadata 事件（当视频的元数据加载完毕时，就会触发）
+   -->
+    <script src="./js/jquery-3.0.0.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var progress = document.getElementById("progress");
+      var percen = document.getElementById("percen");
+      var ps = document.getElementById("ps");
+      var quiet = document.getElementById("quiet");
+      var range = document.getElementById("range");
+      var fast = document.getElementById("fast");
+      var sup = document.getElementById("sup");
+      var bfive = document.getElementById("bfive");
+      var sdown = document.getElementById("sdown");
+      var full = document.getElementById("full");
+      var sou = document.getElementById("sou");
+      var current = document.getElementById("current");
+      var total = document.getElementById("total");
+
+      //功能：设置播放||暂停播放||disabled:禁止按钮再次点击
+      ps.onclick = function() {
+        var a = ps.innerHTML;
+        if (a === "播放") {
+          ps.innerHTML = '暂停播放';
+          sou.play();
+        } else if (a === "暂停播放") {
+          // console.log(a);
+          ps.innerHTML = '播放';
+          sou.pause();
+        }
+      };
+      //功能：设置静音
+      quiet.onclick = function() {
+        var b = quiet.innerHTML;
+        if (b === "静音") {
+          quiet.innerHTML = '取消静音';
+          sou.muted = true;
+        } else if (b !== "静音") {
+          quiet.innerHTML = '静音';
+          sou.muted = false;
+        }
+      }
+      // 功能：调节声音大小
+      sou.volume = Number(range.value); //设置视频音量默认值与设置的相等
+      range.onchange = function() {
+        sou.volume = Number(range.value);
+      }
+      //功能：快进5s
+      fast.onclick = function() {
+        sou.currentTime += 5;
+      }
+      //功能：后退5s；
+      bfive.onclick = function() {
+        sou.currentTime -= 5;
+      }
+      //功能：加速
+      sup.onclick = function() {
+        sou.playbackRate += 0.1;
+      }
+      //功能：减速
+      sdown.onclick = function() {
+        sou.playbackRate -= 0.1;
+      }
+      /*
+      功能：播放的时间
+        @flag:封装增加时间的函数
+      */
+      function flag(time) {
+        return time > 10 ? time : '0' + time;
+      }
+      sou.ontimeupdate = function() {
+        current.innerHTML = flag(parseInt(sou.currentTime / 60)) + ":" + flag(parseInt(sou.currentTime % 60));
+        progress.value = sou.currentTime / sou.duration * 100;
+        // console.log(sou.currentTime);
+        // console.log(progress.value);
+      }
+      //功能：计算显示视频总长
+      sou.onloadedmetadata = function() {
+        //判断视频总时间是否大于一小时
+        if (parseInt(sou.duration / 3600) >= 1) {
+          total.innerHTML = flag(parseInt(sou.duration / 3600)) + ":" + flag(parseInt(sou.duration / 60)) + ":" + flag(parseInt(sou.duration % 60));
+        } else {
+          total.innerHTML = flag(parseInt(sou.duration / 60)) + ":" + flag(parseInt(sou.duration % 60));
+        }
+        // console.log(total.innerHTML);
+      }
+
+      //功能：设置视频全屏
+      full.onclick = function() {
+        if (sou.requestFullscreen) {
+          // console.log("1");
+          sou.requestFullscreen();
+        } else if (sou.webkitRequestFullscreen) {
+          // console.log("2");
+          sou.webkitRequestFullscreen();
+        } else if (sou.mozRequestFullScreen) {
+          // console.log("3");
+          sou.mozRequestFullScreen();
+        }
+      }
+
+
+      document.onkeydown = function(e) {
+        if (e.keyCode == 13 && !document.webkitFullscreenElement) {
+          sou.webkitRequestFullscreen();
+        } else if (e.keyCode == 13 && document.webkitFullscreenElement) {
+          document.webkitCancelFullScreen();
+        }
+      }
+
+    </script>
+  </body>
+
+</html>

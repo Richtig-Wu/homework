@@ -1,0 +1,410 @@
+/*清除浏览器默认样式*/
+
+html, body, th, tr, div, ul, li, a, h1, h2, h3, img, form, font, p, strong {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  padding-left: 15px;
+}
+
+:hover {
+  cursor: pointer;
+}
+
+.center {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+.s {
+  float: left;
+  width: 1px;
+  height: 12px;
+  background-color: #746060;
+  display: block;
+  margin: 14px 8px;
+}
+
+
+/*top 样式*/
+
+.top {
+  height: 40px;
+  background: #333;
+}
+
+.top-left, .top-left li {
+  float: left;
+}
+
+.top-left li {
+  height: 40px;
+  line-height: 40px;
+}
+
+.top-left li a {
+  color: #b0b0b0;
+  font-size: 12px;
+}
+
+.top-left li a:hover {
+  color: #fff;
+}
+
+.top-right {
+  float: right;
+}
+
+.top-right ul {
+  padding-right: 125px;
+}
+
+.shopping {
+  float: right;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #424242;
+  text-align: center;
+  font-size: 12px;
+  color: #b0b0b0;
+}
+
+.shopping:hover {
+  background-color: #fff;
+  color: rgb(255, 103, 0);
+  cursor: pointer;
+}
+
+
+/*nav 样式*/
+
+.nav {
+  height: 100px;
+  /*background-color: red;*/
+}
+
+.nav-left {
+  float: left;
+  width: 234px;
+  height: 60px;
+  /*background-color: blue;*/
+  padding: 20px 0;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  background-color: rgb(255, 103, 0);
+  float: left;
+}
+
+.gif {
+  width: 165px;
+  height: 60px;
+  float: left;
+  background: url("../imges/yyymix.gif") no-repeat;
+}
+
+.nav-middle {
+  width: 685px;
+  height: 88px;
+  line-height: 88px;
+  margin-top: 12px;
+  float: left;
+}
+
+.nav-middle li {
+  float: left;
+  padding: 0 10px;
+}
+
+.nav-middle li a {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(51, 51, 51);
+  font-family: "Microsoft Yahei", "Hiragino Sans GB";
+}
+
+.nav-middle li a:hover {
+  color: rgb(255, 103, 0);
+}
+
+.nav-right {
+  width: 300px;
+  height: 60px;
+  line-height: 88px;
+  float: right;
+  margin-top: 30px;
+  position: relative;
+}
+
+.text {
+  width: 225px;
+  height: 44px;
+  float: left;
+  border: 1px solid #ddd;
+  border-right: none;
+  margin-left: 5px;
+}
+
+
+/*搜索框*/
+
+.ssmi {
+  width: 52px;
+  height: 48px;
+  float: left;
+  border: 1px solid #ddd;
+  background: url(../imges/ssmi.png) no-repeat;
+}
+
+.ssmi:hover {
+  background: none;
+  background-color: rgb(255, 103, 0);
+  ;
+}
+
+
+/*搜索框里的热词*/
+
+.hot {
+  width: 201px;
+  height: 21px;
+  position: absolute;
+  top: 14px;
+  right: 62px;
+  padding: 0 5px;
+}
+
+.hot li {
+  height: 18px;
+  float: left;
+  margin: 0 3px;
+  background-color: rgb(238, 238, 238);
+}
+
+.hot li a {
+  text-align: center;
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  font-size: 13px;
+  font-family: Arial, "Microsoft Yahei", "宋体";
+  color: rgb(117, 117, 117);
+}
+
+.hot li a:hover, .hot li:hover {
+  background-color: rgb(254, 112, 17);
+  color: #fff;
+  cursor: pointer;
+}
+
+.mian-center {
+  height: 460px;
+  background: url("../imges/banner.jpg") no-repeat;
+}
+
+
+/*mian导航*/
+
+.mian-nav {
+  float: left;
+  width: 234px;
+  height: 420px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px 0;
+}
+
+.mian-nav li {
+  height: 42px;
+  line-height: 42px;
+  padding: 0 20px;
+}
+
+.mian-nav li:hover {
+  background-color: #ff6700;
+  cursor: pointer;
+}
+
+.mian-nav li a {
+  font-size: 14px;
+  color: #fff;
+  float: left;
+  font-family: "Microsoft Yahei", "宋体";
+}
+
+b {
+  font-size: 24px;
+  color: #fff;
+  float: right;
+  font-family: "Microsoft Yahei", "宋体";
+}
+
+
+/*mian-banner轮播图*/
+
+.mian-banner {
+  width: 992px;
+  height: 460px;
+  float: left;
+  position: relative;
+}
+
+
+/*banner左右箭头*/
+
+.l, .r {
+  width: 40px;
+  height: 70px;
+  margin-top: 190px;
+  float: left;
+  background: url("../imges/arr_r1_c5.png") no-repeat;
+}
+
+.l:hover {
+  background: url(../imges/arrow_r1_c1.png) no-repeat;
+}
+
+.r {
+  float: right;
+  background: url("../imges/arr_r1_c7.png") no-repeat;
+}
+
+.r:hover {
+  background: url("../imges/arrow_r1_c3.png");
+}
+
+
+/*banner右下角圆点*/
+
+.btm {
+  position: absolute;
+  bottom: 25px;
+  right: 40px;
+}
+
+.btm li {
+  width: 6px;
+  height: 6px;
+  margin: 5px;
+  float: left;
+  border-radius: 23px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+#first {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.btm li:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/*精灵图 star*/
+
+.figure {
+  width: 228px;
+  height: 164px;
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.6);
+  float: left;
+  margin-top: 15px;
+  position: relative;
+}
+
+.figure li {
+  display: list-item;
+  padding-top: 18px;
+  float: left;
+  width: 70px;
+  height: 64px;
+  line-height: 70px;
+  margin-left: 6px;
+  text-align: center;
+}
+
+.figure li a {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.701961);
+  height: 64px;
+  line-height: 80px;
+}
+
+.figure-r {
+  float: right;
+  margin-top: 15px;
+}
+
+.figure-r li {
+  width: 316px;
+  height: 170px;
+  float: left;
+  background: url("../imges/xmad.jpg") no-repeat;
+  background-size: cover;
+  margin-left: 14px;
+}
+
+.figure p {
+  margin-top: -8px;
+  height: 72px;
+  border-right: 1px solid rgba(140, 140, 140, 0.6);
+  float: right;
+}
+
+#p {
+  width: 62px;
+  height: 1px;
+  background-color: rgba(140, 140, 140, 0.6);
+  margin-top: -15px;
+  margin-right: 6px;
+}
+
+i {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  /*display: inline-block;*/
+  background: url("../imges/tu2.png") -26px -18px;
+  margin-left: 7px;
+}
+
+.i2 {
+  background-position: -102px -18px;
+}
+
+.i3 {
+  background-position: -178px -18px;
+}
+
+.i4 {
+  background-position: -26px -100px;
+}
+
+.i5 {
+  background-position: -102px -100px;
+}
+
+.i6 {
+  background-position: -178px -100px;
+}
+
+
+/*精灵图 end*/

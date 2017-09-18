@@ -1,0 +1,238 @@
+
+body,html{
+  // background-color: rgb(162, 241, 139);
+  height: 100%;
+    // width: 100%;
+}
+
+// this is top css
+.navbar-header{a{
+  margin: 0;
+  padding: 0;}
+}
+.gulp-but {
+  background-color: #000;
+&:hover{
+  background: #ddd;
+  .icon-bar{
+    background: #000;
+  }
+}
+}
+.top-nav{
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+}
+.container>nav .icon-bar {
+  height: 2px;
+  background: #fff;
+
+  cursor: pointer;
+}
+
+.aky{
+  position:absolute;
+  top: 0px;
+  right: 0;
+
+  li{
+
+    border-radius:5px 5px ;
+    border: 1px solid #a1a2a6;
+    margin-left: 5px;
+    margin-top: 10px;
+    float: left;
+    a{
+      height: 28px;
+      line-height:5px;
+      font-weight: bold;
+      color: #a1a2a6;
+      &:hover{
+        background: #fff;
+        color: rgb(78, 128, 173);
+        border-color: rgb(94, 159, 217);
+      }
+    }
+  }
+}
+.gulp-nav{
+  ul{
+  padding-right: 180px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  li{
+    border-radius: 7px 7px;
+    margin-top: 10px;
+      margin-left: 0.5px;
+    a{
+      // margin-top: 15px;
+      color: #888;
+      line-height: 5px;
+      height: 30px;
+      &:hover{
+          border-radius: 7px 7px;
+          background-color: rgb(66, 141, 201);
+            color: #fff;
+      }
+
+    }
+  }
+  .active{
+
+    background-color: rgb(66, 141, 201);
+    a{
+        color: #fff;
+    }
+  }
+}
+}
+@media (max-width:767px) {
+.aky{
+  top: -5px;
+  right: 80px;
+}
+.gulp-nav {ul{
+  padding-right: 0;
+}}
+}
+
+.fy {
+  width: 120px;
+
+  li{   width: 120px;
+    a{padding:8px 15px;;
+      margin-top: 10px;
+        line-height: 15px !important;
+    &:hover{
+
+  line-height: 5px;
+        width: 120px;
+        background-color: rgb(66, 141, 201);
+
+    }}
+  }
+}
+
+.item{
+  position: relative;
+
+  height:100%;
+}
+
+.my-banner{
+    width: 100%;
+    height:100%;
+  .city {
+    width: 100%;
+    height: 100%;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+    width: 100%;
+    position: relative;
+
+
+
+  }
+}
+.city1 {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  img{
+    width: 230%;
+    height: 100%;
+    animation: city 80s linear infinite;
+  }
+}
+@keyframes  city{
+  0%{
+    transform: translate3d(0,0px,0);
+  }
+
+
+  100%{
+    transform: translate3d(-1200px,0px,0);
+  }
+}
+.city2{
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  img{
+    width: 230%;
+    height: 100%;
+    animation: city2 60s linear infinite;
+  }
+}
+
+@keyframes city2{
+  0%{
+    transform: translate3d(0px,0,0px);
+  }
+  100%{
+    transform: translate3d(-1200px,0,0px);
+  }
+}
+.city3{
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  animation: city3 38s linear infinite;
+  img{
+    width: 230%;
+    height: 100%;
+  }
+  .wifi {
+   width: 108px !important;
+   height: 94px !important;
+   background: red;
+ }
+}
+
+@keyframes city3{
+  0%{
+    transform: translate3d(0px,0,0px);
+  }
+  100%{
+    transform: translate3d(-1200px,0,0px);
+  }
+}
+
+
+.dm{
+  width: 100%;
+  // height: 100%;
+  min-width: 200px;
+  max-width: 331.55px;
+  position: absolute;
+  left: 32%;
+  top:30%;
+}
+.dm img{
+  animation: one 1s linear 1;
+}
+@keyframes one{
+  0%{
+    transform:translate(0,-200px);
+  }
+  100%{
+    transform:translate(0,0);
+  }
+}
+.dm01 img{
+  animation: two 1.5s  1  ;
+}
+
+@keyframes two{
+  0%{
+    opacity: 0;
+    transform:translate(0,200px);
+  }
+  100%{
+    opacity: 1;
+    transform:translate(0,0);
+  }
+}

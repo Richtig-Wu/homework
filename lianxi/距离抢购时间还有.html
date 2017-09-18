@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #f {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 500px;
+      height: 100px;
+      transform: translate(-50%, -50%);
+      background: rgb(170, 226, 169);
+      font-size: 24px;
+    }
+
+  </style>
+
+  <body>
+    <div id="f">
+    </div>
+
+
+    <script>
+      var f = document.querySelector("#f");
+      var end = new Date("2017-10-1 11:11:11");
+      // console.log(end);
+
+      timer = null;
+
+      function fn() {
+        var start = new Date();
+        var a = parseInt((end.getTime() - start.getTime()) / 1000);
+        if (a == 0) {
+          clearInterval(timer);
+          return;
+        }
+
+        var day = parseInt(a / 3600 / 24);
+        var hour = parseInt(a / 3600 % 24);
+        var min = parseInt(a / 60 % 60);
+        var sec = parseInt(a % 60);
+        f.innerHTML = "距离抢购时间还有" + day + "天" + hour + "时" + min + "分" + sec + "秒";
+        console.log(a / 60);
+
+      }
+
+      timer = setInterval(fn, 1000);
+
+    </script>
+  </body>
+
+</html>

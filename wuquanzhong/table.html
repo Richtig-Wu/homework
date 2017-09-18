@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>学生信息表格</title>
+  </head>
+  <style media="screen">
+    .hve:hover {
+      background-color: yellow;
+    }
+
+  </style>
+
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>性别</th>
+          <th>年龄</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>张三</td>
+          <td>男</td>
+          <td>20</td>
+        </tr>
+
+        <tr>
+          <td>张三</td>
+          <td>男</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>张三</td>
+          <td>男</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>张三</td>
+          <td>男</td>
+          <td>20</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="./js/jquery-3.0.0.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $("table").css({
+        "box-shadow": "0 1px 4px rgb(149, 134, 57)",
+
+        "border-collapse": "collapse",
+        "margin": "150px auto",
+        "textAlign": "center"
+      });
+      $("tr,th,td").css({
+        "border": "1px solid rgb(119, 114, 76)"
+      });
+      $("td,th").css({
+        "width": "100px",
+        "height": "50px"
+      });
+      $("tbody tr").hover(function() {
+        $("tbody tr").addClass("hve");
+
+      });
+
+    </script>
+  </body>
+
+</html>
+
+
+</html>

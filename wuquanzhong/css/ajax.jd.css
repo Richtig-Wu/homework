@@ -1,0 +1,400 @@
+/*清除浏览器默认样式*/
+
+html, body, th, tr, div, ul, li, a, h1, h2, h3, img, form, font, p, strong {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  padding-left: 15px;
+}
+
+.center {
+  width: 990px;
+  margin: 0 auto;
+}
+
+
+/*头部样式*/
+
+.header {
+  width: 100%;
+  height: 90px;
+  /*background-color: red;*/
+}
+
+.logo {
+  width: 160px;
+  height: 50px;
+  background: url(../imges/icon.png) no-repeat;
+  margin-top: 20px;
+  float: left;
+  cursor: pointer;
+}
+
+.center span {
+  padding: 0 25px;
+  cursor: default;
+  line-height: 90px;
+  float: left;
+  font-family: "Microsoft YaHei", "Hiragino Sans GB";
+  font-size: 24px;
+}
+
+.header-r {
+  float: right;
+}
+
+.header-r: {
+  cursor: pointer;
+}
+
+.header-r span {
+  width: 18px;
+  height: 14px;
+  padding: 0 5px;
+  margin-top: 50px;
+  background: url(../imges/q-icon.png) no-repeat;
+}
+
+.header-r a {
+  font-size: 12px;
+  height: 110px;
+  line-height: 110px;
+  color: rgb(109, 109, 109);
+}
+
+.header-r a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+
+/*内容样式*/
+
+.mian {
+  width: 100%;
+  height: 475px;
+  background-color: rgb(14, 19, 35);
+}
+
+.mian-center {
+  width: 990px;
+  height: 100%;
+  /*background-color: red;*/
+}
+
+
+/*登录左边的图样式*/
+
+.tu {
+  margin-left: -6px;
+  width: 650px;
+  height: 475px;
+  background: url(../imges/mian.png) no-repeat;
+  float: left;
+}
+
+
+/*账户登录样式*/
+
+.login {
+  float: right;
+  width: 306px;
+  height: 321px;
+  background-color: #fff;
+  margin-top: 25px;
+  padding: 20px;
+}
+
+
+/*账户登录-头部样式*/
+
+.login-top ul {
+  width: 345px;
+  height: 35px;
+  border-bottom: 1px solid #ddd;
+  margin-left: -20px;
+  position: relative;
+}
+
+.login-top li d {
+  float: right;
+  color: #ddd;
+  height: 25px;
+  line-height: 25px;
+}
+
+.login-top li d:hover {
+  color: :#ddd;
+}
+
+.login-top li {
+  margin-top: -5px;
+  margin-left: 18px;
+  font-size: 18px;
+  text-align: center;
+  width: 150px;
+  height: 35px;
+  float: left;
+}
+
+.login-top li:hover {
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/*账户登录-中部样式*/
+
+.login-center {
+  width: 304px;
+  height: 215px;
+}
+
+.center-top {
+  width: 304px;
+  height: 100px;
+  /*background-color: red;*/
+  position: relative;
+}
+
+.center-top li {
+  width: 304px;
+  height: 38px;
+  margin-bottom: 20px;
+}
+
+.id, .pwd {
+  float: left;
+  width: 38px;
+  height: 36px;
+  border: 1px solid #ddd;
+  background: url(../imges/pwd-icons-new.png);
+  position: absolute;
+  margin-top: 4px;
+}
+
+.hid {
+  background-position: 0 -48px;
+}
+
+.passwd {
+  background-position: -48px 0px;
+}
+
+.hpasswd {
+  background-position: -48px -48px;
+}
+
+.center-top input {
+  margin-left: 35px;
+  float: left;
+  width: 253px;
+  height: 34px;
+  border: 1px solid #ddd;
+  margin-top: 4px;
+}
+
+.center-bottom {
+  width: 304px;
+  height: 72px;
+  margin-top: 40px;
+}
+
+.center-bottom a {
+  float: right;
+  font-size: 12px;
+  font-family: Arial, Verdana, "宋体";
+  color: rgb(102, 102, 102);
+  line-height: 72px;
+  margin-top: -40px;
+}
+
+.center-bottom a:hover {
+  color: red;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+/*账户登录-低部样式*/
+
+.center-bottom button {
+  width: 302px;
+  height: 31px;
+  line-height: 31px;
+  background-color: #e4393c;
+  border: 1px solid #e85356;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Microsoft YaHei', "宋体";
+}
+
+.login-bottom {
+  margin-left: -20px;
+  width: 305px;
+  height: 50px;
+  border-top: 1px solid #ddd;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+
+.login-left, .login-right {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+}
+
+.login-left li {
+  width: 50px;
+  float: left;
+}
+
+.login-left li a {
+  color: rgb(102, 102, 102);
+  font-size: 12px;
+  font-family: Arial, Verdana, "宋体";
+  padding-left: 25px;
+}
+
+.QQ, .WX {
+  width: 19px;
+  height: 18px;
+  display: block;
+  background: url(../imges/QQ-weixin.png);
+  position: absolute;
+  top: 17px;
+}
+
+.WX {
+  background-position: 20px 0px;
+}
+
+.login-left li a:hover {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-left {
+  float: left;
+}
+
+.login-right {
+  float: right;
+}
+
+.login-right a .zc {
+  width: 19px;
+  height: 18px;
+  display: block;
+  background: url(../imges/pwd-icons-new.png);
+  position: absolute;
+  top: 17px;
+  background-position: -221px -75px;
+}
+
+.login-right a {
+  padding-left: 25px;
+  color: red;
+  font-size: 14px;
+  font-family: Arial, Verdana, "宋体";
+}
+
+.login-right a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+/*网页底部样式*/
+
+.footer {
+  height: 86px;
+}
+
+
+/*友情链接*/
+
+.flink {
+  width: 990px;
+  height: 18px;
+  margin: 10px -50px;
+}
+
+.s {
+  float: left;
+  width: 1px;
+  height: 12px;
+  background-color: red;
+  display: block;
+  margin: 4px 8px;
+}
+
+.flink li {
+  float: left;
+  padding-left: 15px;
+  height: 18px;
+  color: rgb(102, 102, 102);
+}
+
+.flink li a {
+  line-height: 18px;
+  height: 18px;
+  color: rgb(102, 102, 102);
+  font-size: 12px;
+  font-family: "宋体";
+}
+
+
+/*版权*/
+
+.copy {
+  float: left;
+  height: 18px;
+  width: 990px;
+  text-align: center;
+  font-size: 12px;
+  font-family: Arial, Verdana, "宋体";
+  color: rgb(102, 102, 102);
+}
+
+.er {
+  height: 23px;
+  width: 304px;
+}
+
+.error {
+  width: 254px;
+  line-height: 12px;
+  border: 1px solid rgb(250, 204, 198);
+  padding: 3px 10px 3px 40px;
+  font-size: 12px;
+  font-family: Arial, Verdana, "宋体";
+  color: rgb(228, 57, 60);
+  background-color: rgb(255, 235, 235);
+  display: none;
+  margin: 0 0 5px;
+  margin-top: -18px;
+  position: absolute;
+  top: 21px;
+}
+
+.block {
+  display: block;
+}

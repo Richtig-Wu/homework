@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>网页加载进度条</title>
+  </head>
+  <style>
+    #progress {
+      margin-top: 200px;
+      background: white;
+      height: 100px;
+      padding: 2px;
+    }
+
+    #percen {
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      color: #fff;
+      background: blue;
+    }
+
+  </style>
+
+
+
+  <body>
+    <div id="progress" class="my-progress">
+      <div id="percen">js外部文件没导入</div>
+    </div>
+
+
+    <script src="./js/jquery-3.0.0.min.js" charset="utf-8"></script>
+    <!--控制台显示获取移动端上的坐标志,判断用户触屏的方向 -->
+    <script src="./clienmouch.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var pgs = "progress";
+      //添加获取对应百分比值
+      function SetProgress(progress) {
+        if (progress) {
+          $("#" + pgs + ">#percen").css("width", String(progress) + "%"); //进度条进行的宽度
+          $("#" + pgs + ">#percen").html(String(progress) + "%");
+        }
+      }
+      //进度条起始位置
+      var i = 0;
+      //设置当进度条到达了100%时这停止间隔定时器
+      function doProgress() {
+        if (i <= 100) {
+          setTimeout("doProgress()", 100);
+          SetProgress(i);
+          i++;
+        }
+      }
+      doProgress(); //调用doProgress，将百分比值填到对应位置
+      clienmouch();
+
+    </script>
+
+  </body>
+
+</html>

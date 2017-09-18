@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>url拆分</title>
+  </head>
+
+  <body>
+
+    <script type="text/javascript">
+      var url = "http://www.domain.com/?user=anonymous&id=123&id=456&id=789&city=BeiJing&city=GuangZhou";
+      var str = url.slice(url.indexOf("?") + 1);
+      console.log(str);
+
+      var a = {};
+      str.replace(/([^=&]+)=([^=&]+)/g, function(match, p1, p2) {
+        console.log("%s= %s", p1, p2);
+        a[p1] = a[p1] ? a[p1] + "@" + p2 : p2;
+      });
+
+      for (var key in a) {
+        if (a[key].indexOf("@") !== -1) {
+          var temp = a[key].split('@'); //根据@字符进行切片，输出的是字符串
+          temp = temp.map(function(elem) { //根据map方法输出的字符串放在新建的数组里
+            return isNaN(elem) ? elem : Number(elem); //判断输出的字符串是数字还是非数字，
+          });
+          a[key] = temp;
+        }
+      }
+      console.log(a);
+
+    </script>
+  </body>
+
+</html>

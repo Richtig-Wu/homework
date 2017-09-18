@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>定时关闭</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #box {
+        width: 600px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 50px;
+        text-align: center;
+        margin: 100px auto;
+        border: 1px solid red;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <div id="box"><span>10</span>s之后自动关闭</div>
+
+  </body>
+  <script src="./jquery-3.0.0.min.js" charset="utf-8"></script>
+  <script>
+    var box = document.getElementById("box");
+    var t = box.firstElementChild;
+
+    var seconds = 10,
+      time;
+
+
+    function close() {
+      seconds--;
+      if (seconds <= 0) {
+        clearTimeout(time);
+        box.style.display = "none";
+        return;
+      }
+      t.innerHTML = seconds;
+
+      timer = setTimeout(close, 1000);
+    }
+
+    setTimeout(function() {
+      close();
+    }, 1000);
+
+  </script>
+
+</html>
