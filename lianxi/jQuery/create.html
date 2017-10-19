@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+  <script>
+    $(function(){
+      $(".name").append(document.createElement("span"));
+      var aa =$("<div></div>").css("border","1px solid red");
+      $(".name").wrapAll(aa);
+      // $("span").text("aaaa");
+    })
+  </script>
+
+  <body>
+    <p>hello word</p>
+    <div class="name">
+      a
+    </div>
+  </body>
+</html>

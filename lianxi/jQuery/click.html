@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/1.8.0/jquery-1.8.0.js"></script>
+  <script>
+    $(function(){
+      $(".five").click(function(){
+        $(this).detach();
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="inner first">a</div>
+    <div class="inner second">b</div>
+    <div class="inner third">c</div>
+    <div class="inner five">d</div>
+  </div>
+
+</body>
+</html>
