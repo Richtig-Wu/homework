@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>颠倒数组顺序</title>
+  </head>
+
+  <body>
+    <script>
+      function srtReveres(str) {
+        return str.split(" ").map(function(e, i) {
+          // reverse：将数组顺序颠倒并输出
+          return e.split('').reverse().join('');
+        }).join(' ');
+      }
+
+      console.log(srtReveres("123  321  1234567"));
+
+    </script>
+  </body>
+
+</html>
