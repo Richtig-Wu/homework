@@ -1,0 +1,456 @@
+
+body,html{
+  // background-color: rgb(162, 241, 139);
+  height: 100%;
+    // width: 100%;
+}
+@mixin wf1{
+  width: 88px !important;
+  height: 74px !important;
+}
+@mixin wf2{
+  width: 40px !important;
+  height: 40px !important;
+}
+@mixin wfpostion{
+  position: absolute;
+}
+
+// this is top css
+.navbar-header{a{
+  margin: 0;
+  padding: 0;}
+}
+.gulp-but {
+  background-color: #000;
+&:hover{
+  background: #ddd;
+  .icon-bar{
+    background: #000;
+  }
+}
+}
+.top-nav{
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+}
+.container>nav .icon-bar {
+  height: 2px;
+  background: #fff;
+  cursor: pointer;
+}
+//nav background
+.myborder{
+  background: #fff;
+  height: 48px;
+}
+.aky{
+  position:absolute;
+  top: 0px;
+  right: 0;
+
+  li{
+
+    border-radius:5px 5px ;
+    border: 1px solid #a1a2a6;
+    margin-left: 5px;
+    margin-top: 10px;
+    float: left;
+    a{
+      height: 28px;
+      line-height:5px;
+      font-weight: bold;
+      color: #a1a2a6;
+      &:hover{
+        background: #fff;
+        color: rgb(78, 128, 173);
+        border-color: rgb(94, 159, 217);
+      }
+    }
+  }
+}
+.gulp-nav{
+  ul{
+  padding-right: 180px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  li{
+    border-radius: 7px 7px;
+    margin-top: 10px;
+      margin-left: 0.5px;
+    a{
+      // margin-top: 15px;
+      color: #888;
+      line-height: 5px;
+      height: 30px;
+      &:hover{
+          border-radius: 7px 7px;
+          background-color: rgb(66, 141, 201);
+            color: #fff;
+      }
+
+    }
+  }
+  .active{
+      background-color: rgb(66, 141, 201);
+      a{
+          color: #fff;
+      }
+    }
+  }
+}
+
+.logo img{
+  width: 250px;
+  padding: 8px;
+}
+
+@media (max-width:767px) {
+  .aky{
+    top: 30px;
+    right: 20px;
+  }
+  .gulp-nav {
+      ul{
+      padding-right: 0;
+    }
+  }
+  .logo{
+    img{
+        width: 180px;
+        padding: 10px;
+    }
+  }
+  .myborder{
+      border: 1px solid rgb(230, 230, 230);
+      background: #fff;
+      height:85px;
+  }
+}
+
+.fy {
+  width: 120px;
+
+  li{   width: 120px;
+    a{padding:8px 15px;;
+      margin-top: 10px;
+        line-height: 15px !important;
+    &:hover{
+  line-height: 5px;
+        width: 120px;
+        background-color: rgb(66, 141, 201);
+    }}
+  }
+}
+// banner_one
+.item{
+  position: relative;
+
+  height:100%;
+}
+
+.my-banner{
+    width: 100%;
+    height:100%;
+  .city {
+    width: 100%;
+    height: 100%;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+    width: 100%;
+    position: relative;
+
+
+
+  }
+}
+.city1 {
+  width: 100%;
+  height: 380px;
+  position: absolute;
+  bottom: 0;
+  img{
+    width: 230%;
+    height: 100%;
+    animation: city 80s linear infinite;
+  }
+}
+@keyframes  city{
+  0%{
+    transform: translate3d(0,0px,0);
+  }
+
+
+  100%{
+    transform: translate3d(-1200px,0px,0);
+  }
+}
+.city2{
+  width: 100%;
+  height: 380px;
+  position: absolute;
+  bottom: 0;
+  img{
+    width: 230%;
+    height: 100%;
+    animation: city2 60s linear infinite;
+  }
+}
+
+@keyframes city2{
+  0%{
+    transform: translate3d(0px,0,0px);
+  }
+  100%{
+    transform: translate3d(-1200px,0,0px);
+  }
+}
+.city3{
+  width: 100%;
+  height: 380px;
+  position: absolute;
+  bottom: 0;
+  animation: city3 40s linear infinite;
+  img{
+    width: 230%;
+    height: 100%;
+  }
+
+}
+.wifi{
+ width: 74px !important;
+ height: 62px !important;
+ position: absolute;
+ top: 185px;
+ left: 400px;
+ animation:  wifi 3s infinite;
+ animation-delay:1s ;
+ opacity: 0;
+}
+.wifi2{
+  @include wf1;
+  @include wfpostion;
+  top: 100px;
+  left: 280px;
+  animation:  wifi 4s infinite;
+  animation-delay:2s ;
+}
+.wifi3{
+  @include wf1;
+  @include wfpostion;
+  top: 180px;
+  right:200px;
+  animation:  wifi 4s infinite;
+  animation-delay:1.5s ;
+}
+.wifi4{
+  @include wf2;
+  @include wfpostion;
+  top: 260px;
+  right:100px;
+  animation:  wifi 2s infinite;
+  animation-delay:1s ;
+}
+.wifi5{
+  @include wf2;
+  @include wfpostion;
+  top: 180px;
+  right:400px;
+  animation:  wifi 2s infinite;
+  animation-delay:2.5s ;
+}
+.wifi6{
+  @include wf1;
+  @include wfpostion;
+  top: 140px;
+  right:600px;
+  animation:  wifi 4s infinite;
+  animation-delay:1s ;
+}
+.wifi7{
+  @include wf2;
+  @include wfpostion;
+  top: 210px;
+  right:800px;
+  animation:  wifi 2s infinite;
+  animation-delay:1.5s ;
+}
+.wifi8{
+  @include wf1;
+  @include wfpostion;
+  top: 240px;
+  right:1000px;
+  animation:  wifi 4s infinite;
+  animation-delay:1s ;
+}
+@media (max-width:767px){
+  .wifi,.wifi2,.wifi3,.wifi4,.wifi5,.wifi6.wifi7,.wifi8{
+    width: 8% !important;
+    height: 12% !important;
+  }
+
+}
+@keyframes wifi{
+  0%{
+    transform: translate3d(0px,0px,0px);
+    opacity: 0;
+  }
+  90%{
+  transform: translate3d(0px,20px,0px);
+    opacity: 1;
+  }
+  100%{
+    transform: translate3d(0px,20px,0px);
+    opacity: 0;
+  }
+}
+@media (max-width:767px){
+  .city1,.city2,.city3{
+    width: 120%;
+    height: 280px;
+  }
+}
+@keyframes city3{
+  0%{
+    transform: translate3d(0px,0,0px);
+  }
+  100%{
+    transform: translate3d(-1200px,0,0px);
+  }
+}
+
+.dm{
+  width: 100%;
+  // height: 100%;
+  min-width: 200px;
+  max-width: 331.55px;
+  position: absolute;
+  left: 32%;
+  top:30%;
+}
+.dm img{
+  animation: one 1s linear 1;
+}
+
+@media (max-width:767px){
+.dm{
+  width: 58%;
+}
+
+}
+@keyframes one{
+  0%{
+    transform:translate(0,-200px);
+  }
+  100%{
+    transform:translate(0,0);
+  }
+}
+.dm01 img{
+  animation: two 1.5s  1  ;
+}
+
+@keyframes two{
+  0%{
+    opacity: 0;
+    transform:translate(0,200px);
+  }
+  100%{
+    opacity: 1;
+    transform:translate(0,0);
+  }
+}
+
+// banner_two
+.banner_two{
+  background: url('../image/background_2.jpg');
+  img:nth-child(1){
+    width:32%;
+    position: absolute;
+    left: 20%;
+    top: 16%;
+    animation: bc 2.5s forwards 1s;
+    opacity: 0;
+  }
+  img:nth-child(2){
+    width:30%;
+    position: absolute;
+    right: 16%;
+    top: 16%;
+    animation: bc 2.5s forwards 1s;
+    opacity: 0;
+  }
+  @keyframes bc{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  img:nth-child(3){
+    width: 8%;
+    height: 16%;
+    position: absolute;
+    top:38%;
+    left: 20%;
+  }
+  img:nth-child(4){
+    width: 38%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    animation: bc 3s forwards 1.5s;
+    opacity: 0;
+  }
+  img:nth-child(5){
+    width: 23%;
+    position: absolute;
+    top: 45%;
+    left: 27%;
+    animation: a 1.5s linear forwards 2.5s;
+    opacity: 0;
+  }
+  @keyframes a{
+    0%{
+      transform: scale(2,2);
+      opacity: 0;
+    }
+
+    100%{
+      transform: scale(1,1);
+      opacity: 1;
+    }
+  }
+  img:nth-child(6){
+    width: 37%;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+  }
+  img:nth-child(7){
+    width: 11%;
+    position: absolute;
+    top: 71%;
+    left: 35%;
+  }
+}
+@media (max-width:767px){
+  .banner_two{
+    img:nth-child(1){
+      width: 100% !important;
+      left: -7%;
+    }
+    img:nth-child(2){
+      width: 86% !important;
+      top:40%;
+      right: 5%;
+    }
+    img:nth-child(4){
+      width: 90% !important;
+      top:58%;
+      left: 12%;
+    }
+  }
+}
